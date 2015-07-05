@@ -1,0 +1,139 @@
+body{
+		margin: 0px;
+		font-size: 15px;
+		font-family: Arial;
+	}
+#container{
+	margin: auto;
+	width: 90%;
+	height: 100%;
+	border: 1px dotted #999999;
+}
+#banner{
+		width: 100%;
+		height: 200px;
+    	padding: 0px;
+    	background-color: #EEEAF2;
+    	background-image: url("image/bg.jpg");
+    	background-repeat: no-repeat;
+    	background-size: 100% 85%;
+    	font-size: 15px;
+	}
+#banner ul{
+	list-style-type: none;
+	position: absolute;
+	right: 100px;
+	top: 163px;
+}
+#banner li{
+	float: left;
+	text-align: center;
+	padding: 0px 6px;
+}
+#banner a:link, #banner a:visited{
+	color: #3CA8C2;
+	text-decoration:none;
+}
+#banner a:hover{
+	color:#A53CC2;
+	text-decoration: underline;
+}
+#both{
+	height: 1450px;
+	width: 100%;
+	margin: auto;
+}
+#links{	
+	float: left;
+	width: 20%;	
+	margin-top: 15px;
+}
+.author p{
+	padding:0px 5px;
+	border-bottom: 1px dashed #999999;
+	font-size: 20px;
+	text-align: center;
+	margin: 15px;
+}
+.author img{
+	width: 200px;
+	height: 250px;
+	position: relative;
+	left: center;
+}
+.classify{
+	margin: 15px;
+}
+.classify h4{
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #3CD5E2;
+	font-size: 20px;
+	padding: 5px;
+}
+.classify ul{
+	list-style-type: none;
+	padding:0px; 
+}
+.classify li{
+	padding: 10px;	
+	border-bottom: 1px dashed #999999;
+}
+.classify a:link, .classify a:visited{
+	color:black;
+	text-decoration: none;
+	text-align: center;
+}
+.classify a:hover{
+	text-decoration: underline;
+	color:#3CA8C2;
+}
+#content{
+		
+		float: left;
+		font-size: 13px;
+		margin: 15px 20px 5px 30px;
+		width: 75%;
+	}
+#content h3{
+	border-bottom: 1px dotted #999999;
+	padding: 0px 0px 3px 0px;
+	margin-bottom: 0px;
+}
+#content h3 a:link, #content a:visited{
+	font-size: 18px;
+	color: black;
+	text-decoration: none;
+}
+#content h3 a:hover{
+	color: #3CA8C2;
+	text-decoration: underline;
+}
+.date{
+	text-align: right;
+	color:#999999;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+.blog{
+	margin: 5px;
+}
+#content .show a:link, #content .show a:visited{	
+	text-decoration: none;
+	color: black;
+}
+#content .show a:hover{
+	color: #3CA8C2;
+}
+#footer{	
+	background-color: #EEEAF2;	
+	height: 30px;
+	color: #3CA8C2;
+	 
+}
+#footer p{
+	text-align: center;	
+	margin: 0px;
+	position: relative;
+	top: 7px;
+}

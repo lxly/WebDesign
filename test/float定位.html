@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>float属性</title>
+	<meta charset='utf-8'>
+	<style type="text/css">
+	body{
+		margin: 15px;
+		font-family: Arial;
+		font-size: 12px;
+	}
+	.father{
+		background-color: #ffea6;
+		border: 1px solid #111111;
+		padding: 25px;
+	}
+	.son1{
+		padding: 10px;
+		margin: 5px;
+		background-color: #70baff;
+		border: 1px dashed #111111;
+		float: left;
+	}
+	.son2{
+		padding: 5px;
+		margin: 0px;
+		background-color: #ffd270;
+		border: 1px dashed #111111;
+	}
+	#father{
+		background-color: #a0c8ff;
+		border: 1px dashed #000000;
+		width: 100%;
+		height: 100px;
+		/*position: relative;*/
+	}
+	#block{
+		background-color: #fff0ac;
+		border: 1px dashed #000000;
+		padding: 10px;
+		position: absolute;
+		left: 20px;
+		top: 40px;
+	}
+	</style>
+</head>
+<body>
+	<!-- <div class='father'>
+		<div class='son1'>float1</div>
+		<div class='son2'>float2</div>
+	</div> -->
+	<div id='father'>
+		<div id='block'>absolute</div>
+	</div>
+</body>
+</html>

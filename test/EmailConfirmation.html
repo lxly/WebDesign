@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>email</title>
+	<script type="text/javascript">
+	// function validate_required(filed,alerttxt){
+	// 	with(filed){
+	// 		if(value==null||value=="")
+	// 		{
+	// 			alert(alerttxt);
+	// 			return false;
+	// 		}
+	// 		else
+	// 			return true;
+	// 	}
+	// }
+	// function validate_form(thisform){
+	// 	with(thisform){
+	// 		if(validate_required(email,"Email must be filled out!")==false)
+	// 		{
+	// 			email.focus();
+	// 			return false;
+	// 		}
+	// 	}
+	// }
+	function validate_email(filed,alerttxt){
+		with(filed)
+		{
+			apos=value.indexOf("@");
+			dotpos=value.lastIndexOf(".");			
+			if(apos<1||dotpos-apos<2)
+			{
+				alert(alerttxt);
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+	}
+	function validate_form(thisform){
+		with(thisform){
+			if(validate_email(email,"Not a valid e-mail address!")==false)
+				{
+					email.focus();
+					return false;
+				}
+		}
+	}
+	</script>
+</head>
+<body>
+	<form action="https://www.baidu.com" onsubmit="return validate_form(this);" method="post">
+		Email:<input type="text" name="email" size="30">
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
