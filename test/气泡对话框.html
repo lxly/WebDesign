@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+
+	.dialog{		
+		background-color: lightblue;
+		width: 200px;
+		height: 150px;
+		border-radius: 10px;
+		text-align: center;
+		line-height: 90px;
+	}
+	.dialog-top{
+		position: absolute;
+		top: 100px;
+		left: 100px;
+	}
+	.dialog-bottom{
+		position: absolute;
+		top: 100px;
+		left: 400px;
+	}
+	.dialog-left{
+		position: absolute;
+		top: 100px;
+		left: 700px;
+	}
+	.dialog-right{
+		position: absolute;
+		top: 100px;
+		left: 1000px;
+	}
+	.dialog-top::before{
+		/*上*/
+		content: "";
+		border-bottom: 15px solid lightblue;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 15px solid transparent;
+		width: 0px;		
+		height: 0px;
+		display: block;
+		position: relative;
+		top: -30px;
+		left:85px;
+	}
+	.dialog-bottom::before{
+		/*下*/
+		content: "";
+		border-bottom: 15px solid transparent;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 15px solid lightblue;
+		width: 0px;		
+		height: 0px;
+		display: block;
+		position: relative;
+		left: 85px;
+		top: 150px;
+	}
+	.dialog-left::before{
+		/*左*/
+		content: "";
+		width: 0;
+		height: 0;
+		display: block;
+		border-left: 15px solid transparent;
+		border-right: 15px solid lightblue;
+		border-top: 15px solid transparent;
+		border-bottom: 15px solid transparent;
+		position: relative;
+		left: -30px;
+		top: 60px;
+	}
+	.dialog-right::before{
+		/*右*/
+		content: "";
+		width: 0;
+		height: 0;
+		display: block;
+		border-left: 15px solid lightblue;
+		border-right: 15px solid transparent;
+		border-top: 15px solid transparent;
+		border-bottom: 15px solid transparent;
+		position: relative;
+		left: 200px;
+		top: 60px;
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="dialog dialog-top">
+		<p>This is top-dialog</p>
+	</div>
+	<div class="dialog dialog-bottom">
+		<p>This is bottom-dialog</p>
+	</div>
+	<div class="dialog dialog-left">
+		<p>This is left-dialog</p>
+	</div>
+	<div class="dialog dialog-right">
+		<p>This is right-dialog</p>
+	</div>
+</body>
+</html>
