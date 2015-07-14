@@ -1,0 +1,576 @@
+<!--利用课余时间写的网站主页-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>潇湘书院</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="content-language" content="zh-CN"/>
+	<meta name="author" content="liyuan"/>
+	<meta name="description" content="study test"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" media=screen href="./xiaoxiang.css" />
+</head>
+<body>
+<header>
+	<form method="get" name="login">
+		用户名：<input type="text" name="username" placeholder="邮箱/手机/用户名"/>
+		密码：<input type="password" name="password"/>
+		<input type="submit" value="登录"/>
+		<a href="#" >忘记密码</a>
+		<input type="submit" value="注册用户"/>
+	</form>
+</header>
+<div id="container">
+	<table id="search">
+		<tr>
+			<td>
+				<div id="logo">
+					<a href="#"><img src="../image/logo.jpg" alt="潇湘书院"></a>
+				</div>
+			</td>
+			<td>
+				<div id="searchForm">					
+					<form method="get" name="search">
+						<select name="search type">
+							<option value="全部">全部</option>
+							<option value="书名">书名</option>
+							<option value="作者名">作者名</option>
+							<option value="标签">标签</option>
+						</select>
+						<input type="text" placeholder="作者名/作品名/作品关键字" autocomplete="on"/>
+						<input type="submit" value="搜索"/>
+					</form>
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+	<nav>
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">排行榜</a></li>
+			<li><a href="#">电子书</a></li>
+			<li><a href="#">精品</a></li>
+			<li><a href="#">新锐</a></li>
+			<li><a href="#">出版</a></li>
+			<li><a href="#">作者</a></li>
+			<li><a href="#">论坛</a></li>
+			<li><a href="#">女生网</a></li>
+			<li><a href="#">游戏</a></li>
+			<li><a href="#">商城</a></li>
+			<li><a href="#">其他</a></li>
+		</ul>
+	</nav>
+
+	<div id="leftMenu">
+		<h1>全部分类</h1>
+		<ul>
+			<li class="mainClass"><a href="#">玄 幻</a>
+				<div class="subClass" style="top:20px">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">奇 幻</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">科 幻</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">灵 异</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">武 侠</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">仙 侠</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">言 情</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">都 市</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">历 史</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">军 事</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">美 文</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">同 人</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">剧 本</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">图 文</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">游 戏</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mainClass"><a href="#">竞 技</a>
+				<div class="subClass">
+					<div class="triangle"></div>
+					<ul>
+						<li><a href="#">类别1</a></li>
+						<li><a href="#">类别2</a></li>
+						<li><a href="#">类别3</a></li>
+						<li><a href="#">类别4</a></li>
+						<li><a href="#">类别5</a></li>
+						<li><a href="#">类别6</a></li>
+						<li><a href="#">类别7</a></li>
+						<li><a href="#">类别8</a></li>
+						<li><a href="#">类别9</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div id="center">
+		<div class="anouncement">
+			<div id="board">
+				<ul>
+					<li><a href="#"><img src="../image/board1.png" alt="firstPic"></a></li>
+					<li><a href="#"><img src="../image/board2.png" alt="secondPic"></a></li>
+					<li><a href="#"><img src="../image/board3.png" alt="thirdPic"></a></li>
+				</ul>
+			</div>
+			<div class="news">
+				<div>
+					<ul>
+						<li><a href="#"> 登武林新游《天乾》 领5万起点币！</a></li>
+						<li><a href="#"> 作者回馈加成 12周年限时魔力打赏 </a></li>
+						<li><a href="#"> 登武林新游《天乾》 领5万起点币！</a></li>
+						<li><a href="#"> 登武林新游《天乾》 领5万起点币！</a></li>
+						<li><a href="#"> 作者回馈加成 12周年限时魔力打赏 </a></li>
+						<li><a href="#"> 登武林新游《天乾》 领5万起点币！</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<ul>
+						<li><a href="#"> 登武林新游《天乾》 领5万起点币！</a></li>
+						<li><a href="#"> 作者回馈加成 12周年限时魔力打赏 </a></li>
+						<li><a href="#"> 登武林新游《天乾》 领5万起点币！</a></li>
+						<li><a href="#"> 登武林新游《天乾》 领5万起点币！</a></li>
+						<li><a href="#"> 作者回馈加成 12周年限时魔力打赏 </a></li>
+						<li><a href="#"> 登武林新游《天乾》 领5万起点币！</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="game">
+			<img src="../image/game1.png" />
+			<img src="../image/game2.jpg" />
+			<img src="../image/game3.jpg" />
+			<img src="../image/game4.jpg" />
+			<img src="../image/game5.jpg" />
+		</div>
+
+		<div id="hottest" class="group">
+			<div>
+				热门榜 <a href="#">更多 >></a>
+			</div>
+			<hr />
+			<ol class="rankingList" start="1">
+				<li><span>[西方奇幻]</span><a href="#">  灵能者对决至高法师，奥林神王！</a></li>
+				<li><span>[现代修真]</span><a href="#">  我有一个无限面积的小世界！</a></li>
+				<li><span>[两晋隋唐]</span><a href="#">  回到唐朝当书吏！</a></li>
+				<li><span>[都市生活]</span><a href="#">  首席杀手重生米国做警察！</a></li>
+				<li><span>[乡土小说]</span><a href="#"> 《天山牧场》，改造美利坚</a></li>
+				<li><span>[西方奇幻]</span><a href="#">  灵能者对决至高法师，奥林神王！</a></li>
+				<li><span>[现代修真]</span><a href="#">  我有一个无限面积的小世界！</a></li>
+				<li><span>[两晋隋唐]</span><a href="#">  回到唐朝当书吏！</a></li>
+				<li><span>[都市生活]</span><a href="#">  首席杀手重生米国做警察！</a></li>
+				<li><span>[乡土小说]</span><a href="#"> 《天山牧场》，改造美利坚</a></li>
+			</ol>
+
+			<ol class="rankingList" start="11">
+				<li><span>[西方奇幻]</span><a href="#">  灵能者对决至高法师，奥林神王！</a></li>
+				<li><span>[现代修真]</span><a href="#">  我有一个无限面积的小世界！</a></li>
+				<li><span>[两晋隋唐]</span><a href="#">  回到唐朝当书吏！</a></li>
+				<li><span>[都市生活]</span><a href="#">  首席杀手重生米国做警察！</a></li>
+				<li><span>[乡土小说]</span><a href="#"> 《天山牧场》，改造美利坚</a></li>
+				<li><span>[西方奇幻]</span><a href="#">  灵能者对决至高法师，奥林神王！</a></li>
+				<li><span>[现代修真]</span><a href="#">  我有一个无限面积的小世界！</a></li>
+				<li><span>[两晋隋唐]</span><a href="#">  回到唐朝当书吏！</a></li>
+				<li><span>[都市生活]</span><a href="#">  首席杀手重生米国做警察！</a></li>
+				<li><span>[乡土小说]</span><a href="#"> 《天山牧场》，改造美利坚</a></li>
+			</ol>
+		</div>
+
+		<div id="newest" class="group">
+			<div>
+				新作榜 <a href="#">更多 >></a>
+			</div>
+			<hr />
+			<ol class="rankingList" start="1">
+				<li><span>[西方奇幻]</span><a href="#">  灵能者对决至高法师，奥林神王！</a></li>
+				<li><span>[现代修真]</span><a href="#">  我有一个无限面积的小世界！</a></li>
+				<li><span>[两晋隋唐]</span><a href="#">  回到唐朝当书吏！</a></li>
+				<li><span>[都市生活]</span><a href="#">  首席杀手重生米国做警察！</a></li>
+				<li><span>[乡土小说]</span><a href="#"> 《天山牧场》，改造美利坚</a></li>
+				<li><span>[西方奇幻]</span><a href="#">  灵能者对决至高法师，奥林神王！</a></li>
+				<li><span>[现代修真]</span><a href="#">  我有一个无限面积的小世界！</a></li>
+				<li><span>[两晋隋唐]</span><a href="#">  回到唐朝当书吏！</a></li>
+				<li><span>[都市生活]</span><a href="#">  首席杀手重生米国做警察！</a></li>
+				<li><span>[乡土小说]</span><a href="#"> 《天山牧场》，改造美利坚</a></li>
+			</ol>
+
+			<ol class="rankingList" start="11">
+				<li><span>[西方奇幻]</span><a href="#">  灵能者对决至高法师，奥林神王！</a></li>
+				<li><span>[现代修真]</span><a href="#">  我有一个无限面积的小世界！</a></li>
+				<li><span>[两晋隋唐]</span><a href="#">  回到唐朝当书吏！</a></li>
+				<li><span>[都市生活]</span><a href="#">  首席杀手重生米国做警察！</a></li>
+				<li><span>[乡土小说]</span><a href="#"> 《天山牧场》，改造美利坚</a></li>
+				<li><span>[西方奇幻]</span><a href="#">  灵能者对决至高法师，奥林神王！</a></li>
+				<li><span>[现代修真]</span><a href="#">  我有一个无限面积的小世界！</a></li>
+				<li><span>[两晋隋唐]</span><a href="#">  回到唐朝当书吏！</a></li>
+				<li><span>[都市生活]</span><a href="#">  首席杀手重生米国做警察！</a></li>
+				<li><span>[乡土小说]</span><a href="#"> 《天山牧场》，改造美利坚</a></li>
+			</ol>
+		</div>
+
+		<div id="classic" class="group">
+			<div>
+				经典推荐<a href="#">更多 >></a>
+			</div>
+			<hr />
+			<div class="oneBook">
+				<div class="bookPic">
+					<img src="../image/book1.png"/>
+				</div>
+				<div class="bookInfo">
+					<div></div>
+					<div>
+						<div class="bookTitle">
+							书名：
+							<a href="#">《热血战神》</a>
+						</div>
+						<div class="bookAuthor">
+							作者：
+							<a href="#">风中啸</a>
+						</div>
+						<div class="bookSummary">
+							<a href="#">
+								<p>
+									他，来自另一个世界。在那个世界里拥有着极高的科技，但这科技的最大作用却是将他送到了一个极端古老的时代。他并不想称王称帝，但是诸侯王位仍是无可避免地落到了他的头上。从一开始的袖手旁观，到为天下黎民的惨状而心痛，他渐渐融入了这个乱世之中。为了平定乱世，安定百姓，他毅然...
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="oneBook">
+				<div class="bookPic">
+					<img src="../image/book2.png"/>
+				</div>
+				<div class="bookInfo">
+					<div></div>
+					<div>
+						<div class="bookTitle">
+							书名：
+							<a href="#">《热血战神》</a>
+						</div>
+						<div class="bookAuthor">
+							作者：
+							<a href="#">风中啸</a>
+						</div>
+						<div class="bookSummary">
+							<a href="#">
+								<p>
+									他，来自另一个世界。在那个世界里拥有着极高的科技，但这科技的最大作用却是将他送到了一个极端古老的时代。他并不想称王称帝，但是诸侯王位仍是无可避免地落到了他的头上。从一开始的袖手旁观，到为天下黎民的惨状而心痛，他渐渐融入了这个乱世之中。为了平定乱世，安定百姓，他毅然...
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="oneBook">
+				<div class="bookPic">
+					<img src="../image/book3.png"/>
+				</div>
+				<div class="bookInfo">
+					<div></div>
+					<div>
+						<div class="bookTitle">
+							书名：
+							<a href="#">《热血战神》</a>
+						</div>
+						<div class="bookAuthor">
+							作者：
+							<a href="#">风中啸</a>
+						</div>
+						<div class="bookSummary">
+							<a href="#">
+								<p>
+									他，来自另一个世界。在那个世界里拥有着极高的科技，但这科技的最大作用却是将他送到了一个极端古老的时代。他并不想称王称帝，但是诸侯王位仍是无可避免地落到了他的头上。从一开始的袖手旁观，到为天下黎民的惨状而心痛，他渐渐融入了这个乱世之中。为了平定乱世，安定百姓，他毅然...
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="oneBook">
+				<div class="bookPic">
+					<img src="../image/book4.png"/>
+				</div>
+				<div class="bookInfo">
+					<div></div>
+					<div>
+						<div class="bookTitle">
+							书名：
+							<a href="#">《热血战神》</a>
+						</div>
+						<div class="bookAuthor">
+							作者：
+							<a href="#">风中啸</a>
+						</div>
+						<div class="bookSummary">
+							<a href="#">
+								<p>
+									他，来自另一个世界。在那个世界里拥有着极高的科技，但这科技的最大作用却是将他送到了一个极端古老的时代。他并不想称王称帝，但是诸侯王位仍是无可避免地落到了他的头上。从一开始的袖手旁观，到为天下黎民的惨状而心痛，他渐渐融入了这个乱世之中。为了平定乱世，安定百姓，他毅然...
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="writer" class="group">
+			<div>
+				名家推荐 <a href="#">更多 >></a>
+			</div>
+			<hr />
+			<a href="#"><img src="../image/writer1.jpg" /></a>
+			<a href="#"><img src="../image/writer2.jpg" /></a>
+			<a href="#"><img src="../image/writer3.jpg" /></a>
+			<a href="#"><img src="../image/writer4.jpg" /></a>
+			<a href="#"><img src="../image/writer1.jpg" /></a>
+			<a href="#"><img src="../image/writer2.jpg" /></a>
+			<a href="#"><img src="../image/writer3.jpg" /></a>
+			<a href="#"><img src="../image/writer4.jpg" /></a>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+</div>
+<footer>
+	<div>
+		<ul>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">用户指南</a></li>
+			<li><a href="#">作者投稿</a></li>
+			<li><a href="#">提交建议</a></li>
+			<li><a href="#">招聘信息</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">友情链接</a></li>
+			<li><a href="#">客服中心</a></li>
+		</ul>
+	</div>
+</footer>
+<script type="text/javascript" src="./jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./xiaoxiang.js"></script>
+</body>
+</html>
