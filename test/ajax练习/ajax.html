@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+ <title>test</title>  
+ <meta charset="utf-8">
+ <script type="text/javascript">
+function loadXMLDoc () {
+	var xmlhttp;
+	var txt,x,i;
+	if(window.XMLHttpRequest)
+	{
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		xmlhttp=new ActiveXObjext(Microsoft.XMLHTTP);
+	}
+	xmlhttp.onreadystatechange=function(){
+		if(xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			xmlDoc=xmlhttp.responseXML;
+			txt="";
+			x=xmlDoc.getElementsByTagName('title');
+			for(i=0;i<x.length;i++)
+			{
+				txt=txt+x[i].childNodes[0].nodeValue+"<br />";
+			}
+			Document.getElementById('myDiv').innerHTML=txt;
+		}
+	}
+	xmlhttp.open("POST","/ajax/demo_get2.asp?t="+Math.random(),true);
+	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	xmlhttp.send("fname=Bill&lname=Gates");
+}
+ </script>
+</head>
+<body>
+ <h2>Ajax</h2>
+ <button type="button" onclick="loadXMLDoc()">请求数据</button>
+ <div id="myDiv"></div>
+ 	
+ </div>
+</body>
+</html>

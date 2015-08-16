@@ -1,0 +1,117 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+      
+    </title>
+    <meta charset="utf-8" />
+<script src="../jquery-1.11.3.min.js" type="text/javascript"></script>
+
+    
+    <script type="text/javascript">
+    //<!--不论鼠标指针进入被选元素或其子元素，都会触发 mouseover 事件-->
+  $(function () {						    //-------mouseover 鼠标进入
+      $("#div1").mouseover(function () {
+    $("#btn1").val(parseInt($("#btn1").val()) + 1)
+      })
+
+      //当鼠标进入div1的时候会触发mouseover事件，因为btn1和btn2是包裹在div1下的子元素，所以当鼠标从div进入到子元素 btn1的时候又会触发mouseover事件 ,当鼠标从btn1进入到btn2的时候又会再次触发mouseover事件，当鼠标离开btn2元素本身 进入到div1的时候，又会触发mouseover
+  })
+  
+
+  //---------------------------------------------------------------------------------------------------------
+
+  $(function () {						    //-------mousemove 鼠标进入
+      $("#div2").mousemove(function () {
+    $("#btn3").val(parseInt($("#btn3").val()) + 1)
+      })
+
+      //<!--当鼠标进入到div2的时候就会触发mousemove事件，进入div2后【只要移动一个像素点】都会触发mousemove事件 [请谨慎使用，耗资源]-->
+  });
+  
+  //---------------------------------------------------------------------------------------------------------
+
+  $(function () {						    //-------mouseenter 鼠标进入
+      $("#div3").mouseenter(function () {
+    $("#btn5").val(parseInt($("#btn5").val()) + 1)
+      })
+
+      //<!--只有当鼠标进入【被选中】控件div3的时候才会触发mouseenter事件，当鼠标进入【被选中】控件的【子元素】的时候而没有离开被选中控件本身的时候【不会再次】触发-->
+  });
+
+
+  //********************************************************************************************************
+  
+
+
+  //<!--不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件-->
+  $(function () {						    //-------mouseout 鼠标离开
+      $("#div4").mouseout(function () {
+    $("#btn7").val(parseInt($("#btn7").val()) + 1)
+      })
+
+      //当鼠标离开的div4的时候就会触发mouseout事件，当鼠标进入div4的子控件btn7后，离开btn7就会再次触发mouseout事件，当鼠标从btn7进入btn8,后，离开btn8的时候也会再次触发mouseout事件。 
+  });
+
+  //---------------------------------------------------------------------------------------------------------
+
+  $(function () {						    //-------mouseleave 鼠标离开
+      $("#div5").mouseleave(function () {
+         $("#btn9").val(parseInt($("#btn9").val()) + 1)
+      })
+
+      //<!--只有当鼠标离开【被选中】控件的时候才会触发mouseenter事件；当鼠标离开【被选中】的【子元素】而【没有离开被选中的控件】的时候【不会再次】触发-->
+  });
+         
+
+
+  //==========================================================================================================
+    </script>
+</head>
+<body>
+<p> 当鼠标进入div1的时候会触发mouseover事件，因为btn1和btn2是包裹在div1下的子元素，所以当鼠标从div进入到子元素 btn1的时候又会触发mouseover事件 ,当鼠标从btn1进入到btn2的时候又会再次触发mouseover事件，当鼠标离开btn2元素本身 进入到div1的时候，又会触发mouseover</p>
+<div style=" border:10px solid red" id="div1">
+<input type="button" value="0" id="btn1" />
+<input type="button" value="btn2" id="btn2"  style=" margin-left:40px"/>
+</div>
+<br/>
+<br/>
+<br/>
+<hr/>
+<p>  当鼠标进入到div2的时候就会触发mousemove事件，进入div2后【只要移动一个像素点】都会触发mousemove事件 [请谨慎使用，耗资源]</p>
+<div style=" border:10px solid red" id="div2">
+<input type="button" value="0" id="btn3" />
+<input type="button" value="btn4" id="btn4"  style=" margin-left:40px"/>
+</div>
+<br/>
+<br/>
+<br/>
+<hr/>
+<hr/>
+<p>只有当鼠标进入【被选中】控件div3的时候才会触发mouseenter事件，当鼠标进入【被选中】控件的【子元素】的时候而没有离开被选中控件本身的时候【不会再次】触发</p>
+<div style=" border:10px solid red" id="div3">
+<input type="button" value="0" id="btn5" />
+<input type="button" value="btn6" id="btn6"  style=" margin-left:40px"/>
+</div>
+<br/>
+<br/>
+<br/>
+<hr/>
+<p>当鼠标离开的div4的时候就会触发mouseout事件，当鼠标进入div4的子控件btn7后，离开btn7就会再次触发mouseout事件，当鼠标从btn7进入btn8,后，离开btn8的时候也会再次触发mouseout事件。</p>
+<div style=" border:10px solid red" id="div4">
+<input type="button" value="0" id="btn7" />
+<input type="button" value="btn8" id="btn8"  style=" margin-left:40px"/>
+</div>
+<br/>
+<br/>
+<br/>
+<hr/>
+<p>只有当鼠标离开【被选中】控件的时候才会触发mouseenter事件；当鼠标离开【被选中】的【子元素】而【没有离开被选中的控件】的时候【不会再次】触发</p>
+<div style=" border:10px solid red" id="div5">
+<input type="button" value="0" id="btn9" />
+<input type="button" value="btn10" id="btn10"  style=" margin-left:40px"/>
+</div>
+<br/>
+<br/>
+<br/>
+</body>
+</html>

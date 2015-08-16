@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>列表操作</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#list{
+			width: 500px;
+			height: 300px;
+			margin: 30px auto;
+			/*position: absolute;*/
+		}
+		p{
+			margin-bottom: 3px;
+		}
+		#add{
+			float: right;
+			position:relative;
+			top: -20px;
+			left: -10px;
+			cursor: pointer;
+		}
+		
+		ul{
+			list-style: none;
+			border-top:dotted 1px #c9cbce;
+			padding: 5px;
+		}
+		li{
+			height: 20px;
+			border-bottom:dashed 1px #c9cbce; 
+			padding-top:15px; 
+			color: #5F6D64;
+		}
+		ul a{
+			cursor:pointer;
+		}
+		.del{
+			color: #5F6D64;
+			float: right;
+			background-color: lightblue;
+			padding: 2px;
+			font-size: 13px;
+			border-radius: 2px;
+			position: relative;
+			top: -5px;
+			display: none;
+		}
+
+			
+	</style>
+</head>
+
+<body>
+<div id="list">
+	<p>客户案例</p>
+	<a id="add">MORE</a>
+	<ul>
+		<li>
+			<a>在希望的田野上——走进内蒙古通辽</a>
+			<a class="del">删除</a>			
+		</li>
+		<li>
+			<a>河南新乡市秀才村村民魏国山的故事</a>
+			<a class="del">删除</a>			
+		</li>
+		<li>
+			<a>宜信融资租赁农机业务</a>
+			<a class="del">删除</a>			
+		</li>
+		<li>
+			<a>王先生的汽车梦</a>
+			<a class="del">删除</a>			
+		</li>
+		<li>
+			<a>争分夺秒，火速圆梦</a>
+			<a class="del">删除</a>			
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	var more=document.getElementById("add");
+		var oLi=document.getElementsByTagName('li');
+		var del=document.getElementsByClassName("del");
+	window.onload=function(){
+		
+
+		for(var i=0;i<oLi.length;i++)
+		{
+			oLi[i].index=i;
+			del[i].index=i;
+			oLi[i].onmouseover=function(){
+				oLi[this.index].style.color="#2FB361";
+				del[this.index].style.display="block";
+				del[this.index].onclick=function(){					
+					oLi[this.index].style.display="none";
+				}
+			}
+			oLi[i].onmouseout=function(){
+				del[this.index].style.display="none";
+				oLi[this.index].style.color="#5F6D64";
+			}
+		}
+		more.onclick=function(){
+			for(var i=0;i<oLi.length;i++)
+			{
+				
+				if(oLi[i].style.display=="none")
+				{
+					oLi[i].style.display="block";
+					break;
+				}
+			}
+		}
+
+	}
+	
+</script>
+</body>
+</html>

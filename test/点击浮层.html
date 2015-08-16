@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>点击浮层</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#out{
+		position: absolute;
+		left: 170px;
+		top: 80px;
+		width: 65px;
+	}
+	a{
+		font-size:25px;
+	}
+		
+	.fadein{
+		display:block;
+		position: absolute;
+		left: -70px;
+		top:45px;
+		width: 200px;
+		height: 100px;
+		background-color: lightblue;
+		border-radius: 5px;
+	}
+	.fadeout{
+		left: -70px;
+		top:45px;
+		width: 200px;
+		height: 100px;
+		background-color: lightblue;
+		border-radius: 5px;
+		display:none;
+	}
+	#triangle{
+		width: 0;
+		height: 0;
+		border-bottom: 10px solid lightblue;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid transparent;
+		position: relative;
+		left: 90px;
+		top: -20px;
+		margin: 0;
+	}
+	</style>
+</head>
+<body>
+	<div id="out" style="border:1px solid red">
+		<a id="a1" style="border:1px solid blue">luoxi</a>
+		<div id="dialog">
+			<div id="triangle"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		var out=document.getElementById("out");
+		var dialog=document.getElementById("dialog");
+		dialog.className="fadeout";
+		var isactive=false;
+		var timeoutvar="";
+		out.onmouseover=function(e){
+		
+			dialog.className="";
+			dialog.className="fadein";
+			e.preventDefault();
+			console.log("1");
+			
+		}
+		out.onmouseleave=function(){
+			
+			if(isactive==true){
+				dialog.className="";
+				dialog.className="fadein";
+				console.log("5")
+
+			}else{
+				
+			timeoutvar=setTimeout("hideme()",1500);
+			console.log("2");
+			}
+		}
+		
+		dialog.onmouseleave=function(){
+			console.log("4");
+			isactive=false;
+			timeoutvar=setTimeout("hideme()",1500);
+		}
+		dialog.onmouseover=function(e){
+			isactive=true;
+			// clearTimeout(timeoutvar);
+			console.log("3");
+			dialog.className="";
+			dialog.className="fadein";
+			
+			e.preventDefault();
+		}
+		function hideme(){
+			if(isactive==false)
+			{	
+				dialog.className="";	
+				dialog.className="fadeout";
+			}
+		}
+		
+	</script>
+</body>
+</html>

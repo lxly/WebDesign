@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.slides{
+	position: relative;
+	width: 1100px;
+	height: 422px;
+	margin: 100px auto;
+	overflow: hidden;
+	border-radius: 10px;
+	border:5px solid lightblue;
+}
+ul{
+	list-style-type:none; 
+	width: 6600px;
+	position: absolute;
+}
+li{
+	float: left;
+}
+.num{
+	position: absolute;
+	/*border:1px solid black;*/
+	bottom:25px;
+	left: 505px;
+	width: 90px;
+	height: 9px;
+}
+.num span{
+	display: block;
+	float: left;
+	width: 9px;
+	height: 9px;
+	margin-right: 3px;
+	border-radius: 50%;
+	background-color: white;
+	border:1px solid #858080;
+}
+span.current{
+	background-color: lightgreen;
+}

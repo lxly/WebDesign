@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+	
+	.square{
+		width: 100px;
+		height: 100px;
+		background-color: lightgreen;
+		margin-top: 20px;
+		font-size: 10px;
+	}
+	</style>
+</head>
+<body>
+<div class="content">
+	<button>开始动画</button>
+	<div class="square">hello</div>
+	<ol>
+		<li>list item 1</li>
+		<li>list item 2</li>
+		<li>list item 3</li>
+	</ol>
+</div>
+<script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("button").click(function(){
+		var square=$(".square");
+		square.animate({height:"200px",opacity:"0.4"},"slow");
+		square.animate({width:"200px",opacity:"0.8"},"slow");
+		square.animate({height:"100px",opacity:"0.4"},"slow");
+		square.animate({width:"100px",opacity:"0.8"},"slow");
+		square.animate({fontSize:"30px"},"slow");
+
+		var txt1="<li>list item</li>";
+		var txt2=document.createElement("li");
+		txt2.innerHTML="list item";
+		var txt3=$("<li></li>").text("list item");
+		$("ol").append(txt1,txt2,txt3);
+	});
+});
+	
+	
+</script>
+</body>
+</html>

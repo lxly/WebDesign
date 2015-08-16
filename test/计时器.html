@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>计时器</title>
+</head>
+<body>
+	<input type='button' onclick='start()' value='开始计时'>
+	<input type='text' id='txt'>
+	<input type='button' onclick='stop()' value='结束计时'>
+	<p>请点击上面的按钮。输入框会从0开始一直进行计时。</p>
+	<script type="text/javascript">
+	var c=0;
+	var t;
+	function start(){
+		document.getElementById('txt').value=c;
+		c=c+1;
+		t=setTimeout('start()',1000);
+
+	}
+	function stop(){
+		// c=0;
+		setTimeout("document.getElementById('txt').value=0",0);
+		clearTimeout(t);
+	}
+	</script>
+</body>
+</html>

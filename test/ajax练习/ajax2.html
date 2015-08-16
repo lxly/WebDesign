@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax-jquery</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="./jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("p").load("",function(responseTxt,statusTxt,xhr){
+				if(statusTxt=="success")
+				{
+					alert("外部内容加载成功！");
+				}
+				if(statusTxt=="error")
+					alert("Error:"+xhr.status+":"+xhr.statusText);
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<p>请点击下面的按钮，通过jQuery ajax改变这段文本。</p>
+	<button>获得外部内容</button>
+</body>
+</html>

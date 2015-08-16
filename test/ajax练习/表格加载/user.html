@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table</title>
+	<meta charset='utf-8' />
+	<style type="text/css">
+		table,td,th{
+			border:solid 1px silver;
+			border-collapse: collapse;
+			text-align: center;
+		}
+		th,td{
+			width: 100px;
+			height: 20px;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="加载xml数据" onclick="GetXML();" />
+	<input type="button" value="加载json数据" onclick="GetJSON();" />
+	<br />
+	<br />
+	<table id="userinfo">
+		<thead>
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<script type="text/javascript">
+		function GetXML(){
+			var xmlhttp=window.XMLHttpRequest? new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHttp");
+			xmlhttp.open("get","user.xml?random="+Math.random(),true);
+			xmlhttp.onreadystatechange=function(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					var result=xmlhttp.responseXML.documentElement;
+					var users=result.getElementsByTagName('user');
+					for(var i=0;i<users.length;i++)
+					{
+						var user=users[i];
+						var username=user.getElementsByTagName('username')[0].text;
+						var age=user.getElementsByTagName('age')[0].text;
+
+
+						appendRow(username,age);
+					}
+				}
+			}
+			xmlhttp.send();
+		}
+		function appendRow(username,age){
+			var ui=document.getElementById("userinfo");
+			var newRow=ui.insertRow(ui.rows.length);
+			newRow.insertCell(0).innerHTML=username;
+			newRow.insertCell(1).innerHTML=age;
+		}
+
+		function GetJSON(){
+			var xmlhttp=window.XMLHttpRequest? new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHttp");
+			xmlhttp.open("get","user.js?random="+Math.random(),true);
+			xmlhttp.onreadystatechange=function(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200)
+				{
+					var result=xmlhttp.responseText;
+					var users=eval("("+result+")");
+
+					for(var i=0;i<users.length;i++){
+						var user=users[i];
+
+						appendRow(user.username,user.age);
+					}
+				}
+			}
+			xmlhttp.send();
+		}
+	</script>
+</body>
+</html>

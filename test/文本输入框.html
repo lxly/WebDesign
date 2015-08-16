@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>文本输入框</title>
+</head>
+<body>
+	<p>可以输入<span id="counter">10</span>字</p>
+	<textarea id="status" name="status" rows="6" cols="40"></textarea>
+	<script type="text/javascript">
+		var maxlength=10;
+		var myLength,i;
+		function countChar(textareaName,spanName){
+			var str=document.getElementById(textareaName).value;
+			if(myLength>maxlength*2)
+			{
+				//str=str.substring(0,i+1);
+				document.getElementById(spanName).innerHTML=Math.floor((10*2-getStrLength(str))/2);
+			}
+			else
+			{
+				document.getElementById(spanName).innerHTML=Math.floor((10*2-getStrLength(str))/2);
+			}
+			
+		}
+		function getStrLength(str){
+			myLength=0;
+			//for(i=0;i<str.length&&myLength<=maxlength*2;i++){
+			for(i=0;i<str.length;i++){
+				if(str.charCodeAt(i)>0&&str.charCodeAt(i)<128)
+				{
+					myLength++;
+				}
+				else{
+					myLength+=2;
+				}
+			}
+			return myLength;
+		}
+		document.getElementById("status").onkeydown=function(){
+			countChar("status","counter");
+		}
+		document.getElementById("status").onkeyup=function(){
+			countChar("status","counter");
+		}
+	
+	</script>
+</body>
+</html>
