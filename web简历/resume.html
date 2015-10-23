@@ -1,0 +1,281 @@
+<!--
+这次的web简历制作，我将工作量分为3部分：整体的设计、代码的编写和测试优化
+整体设计部分：主要以使用者的角度设计内容如何分类，页面的数量，每个页面的框架如何等等。
+代码编写部分：首先利用html和css实现设计的内容，然后通过颜色搭配，突出内容主题，最后通过CSS3、JavaScript、jQuery增加一些视觉效果。
+测试优化部分：关注页面之间切换、页面窗口大小调整、浏览器兼容性等问题。如点击已选中的导航栏不会产生动画效果、页面窗口的变动不会太大影响页面文字内容和页面整体布局等等。
+这是我第一次编写web简历，如有不足还望多多包涵多多指教！谢谢！！
+-->
+
+<!--整体页面page主要分三部分：header、container、footer
+    header部分是页面标题
+    container是页面内容
+    footer部分包括作者、制作日期-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>ly的简历</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="content-language" content="zh-CN"/>
+	<meta name="author" content="liyuan"/>
+	<meta name="description" content="my resume"/>
+	<link rel="stylesheet" href="./style/style.css" type="text/css">	
+</head>
+<body>
+	<div id="page">
+	<!--页面顶部-->
+	<div id="header">
+		<p>The Resume of L Y</p>
+	</div>
+	<!--页面中间内容-->	
+	<div id="container">
+		<!--左侧导航栏-->
+		<ul id="tab-menu">
+			<li class="selected">自我介绍</li>
+			<li>我的简历</li>
+			<li>联系方式</li>
+		</ul>
+		<!--右侧内容-->
+		<div id="tab-content">
+			<!--self introduction-->
+			<div class="tab" style="display:block;">
+				<h1>自我介绍</h1>
+				<div id="left">
+				    <p class="introduction">我叫ly，北京邮电大学软件专业在读研究生。我喜欢漂亮网站，喜欢前端设计。</p>
+				    <p class="introduction">实验室的生活一方面教会了我与大家协作，另一方面也培养了我独立学习和思考的能力。利用课余时间我自学了HTML、CSS、JavaScript、jQuery等相关技术，将它们应用到实践当中，并以精益求精的态度加以完善。在平时的学习工作过程中，逐渐培养了自己积极主动、以始为终、要事第一的高效工作习惯。这次制作web简历，不仅是对我自己学习成果的检验，增加了自己学好前端的信心，也让我知道了自己还欠缺的知识，使得今后的学习更有针对性，效率更高。</p>
+				    <p class="introduction">我认为只要我比别人多坚持一点儿，更勤奋一点儿，我就会达成自己的目标，成为一名合格的前端工程师！</p>
+				</div>
+				<div id="right">					
+					<div class="polaroid rotate-left">
+						<img src="./images/flower.png" alt="my school" width="220" height="120">
+					</div>
+					<div class="polaroid rotate-right">
+						<img src="./images/leaf.png" alt="my school" width="220" height="120">
+					</div>
+					<div class="polaroid rotate-left2">
+						<img src="./images/sun.png" alt="my school" width="220" height="120">
+					</div>					
+				</div>								
+			</div>				
+			<!--resume page-->
+				<div class="tab" style="display:none;">
+					<h1>luoxi的简历</h1>
+					<!--右侧小标题-->
+					<ul class="inner-tab">
+						<li>
+							<a href="#" class="selected">个人信息</a>
+						</li>
+						<li>
+							<a href="#">教育背景</a>
+						</li>
+						<li>
+							<a href="#">项目经验</a>
+						</li>
+						<li>
+							<a href="#">获奖情况</a>
+						</li>
+						<li>
+							<a href="#">技能</a>
+						</li>
+					</ul>
+					<!--右侧小标题下内容-->
+					<div class="panes">
+						<!--personal information-->
+						<div style="display:block;">
+							<ul class="personal">
+								<li>姓名：ly</li>
+								<li>性别：女</li>
+								<li>出生日期：1991年1月14日</li>
+								<li>毕业时间：2016年4月</li>
+								<li>可面试城市：北京</li>
+								<li>可实习时间：2015年7月--2015年9月</li>
+								<li>最高学历：硕士研究生</li>
+								<li>毕业院校：北京邮电大学</li>
+								<li>学习形式：全国普通高等院校全日制</li>		
+							</ul>	
+						</div>
+						<!--education-->
+						<div style="display:none;">
+							<div class="pen">
+								<h2>北京邮电大学</h2>
+								<h4>2013.09--至今</h4>
+								<ul>
+									<li>城市：北京市海淀区</li>
+									<li>学位：硕士</li>
+									<li>学习形式：全国普通高等院校全日制</li>
+									<li>学院名称：软件学院</li>
+									<li>专业类别：软件工程</li>
+								</ul>
+							</div>
+							<div class="divider"></div>
+							<div class="pen">
+								<h2>青岛科技大学</h2>
+								<h4>2009.09--2013.07</h4>
+								<ul>
+									<li>城市：山东省青岛市</li>
+									<li>学位：学士</li>
+									<li>学习形式：全国普通高等院校全日制</li>
+									<li>学院名称：自动化学院</li>
+									<li>专业类别：电子信息科学与技术</li>
+								</ul>
+							</div>
+						</div>
+						<!--experience-->
+						<div style="display:none;">
+							<div class="job">
+								<h2>课余重写“潇湘中文小说网”主页</h2>
+								<h4>2015.05--至今</h4>
+								<ul>
+									<li>
+										<p class="subtitle">
+											<span>
+												项目描述：
+											</span>		
+											利用课余时间自学前端技术，极大锻炼了快速自学新知识的能力与敢于接受挑战的勇气。通过重写“潇湘中文小说网”主页，检验自己自学前端技术的成果，从而找到自己的不足，发现自己还欠缺或者掌握不扎实的知识。
+										</p>
+									</li>				
+									<li>
+										<p class="subtitle">
+											<span>
+												项目中职责：
+										    </span>
+											网页的整体设计、代码编写、测试和维护
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div class="divider"></div>
+							<div class="job">
+								<h2>地铁大数据智能分析平台</h2>
+								<h4>2014.04--至今</h4>
+								<ul>
+									<li>
+										<p class="subtitle">
+											<span>
+												项目描述：
+											</span>			
+											本项目是实验室与北京交控科技有限公司合作，利用hadoop平台对地铁运营日志进行采集分析，实现对地铁运营设备的准实时监控，完成对设备运行状态的统计查询、告警预警。
+										</p>
+									</li>				
+									<li>
+										<p class="subtitle">
+											<span>
+												项目中职责：
+											</span>			
+											前期新技术的调研与学习、系统需求分析与功能设计、地铁日志采集功能开发、地铁日志分析功能开发、项目文档撰写、代码测试维护。
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--awards-->
+						<div style="display:none;">
+                            <div class="award">
+								<h2>校级优秀学生</h2>
+								<ul>
+									<li>
+										获奖级别：院校级
+									</li>
+									<li>
+										获奖时间：2012-03-05
+									</li>
+									<li>
+										获奖描述：成绩优异，各方面表现优秀，被评为校级优秀学生
+									</li>
+								</ul>
+							</div>
+							<div class="divider"></div>
+							<div class="award">
+								<h2>励志奖学金</h2>
+								<ul>
+									<li>
+										获奖级别：国家级
+									</li>
+									<li>
+										获奖时间：2012-05-10
+									</li>
+									<li>
+										获奖描述：成绩优秀，各方面表现突出，获得国家励志奖学金
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--skill-->
+						<div style="display:none;">
+							<div class="one-half">
+								<h2>
+									Html
+									<img src="./images/5star.png" class="star" alt width="94" height="20">		
+								</h2>
+								<ul>
+									<li>使用时间：1年</li>
+									<li>掌握程度：熟练</li>
+								</ul>
+								<div class="divider"></div>
+								<h2>
+									Css
+									<img src="./images/5star.png" class="star" alt width="94" height="20">			
+								</h2>
+								<ul>
+									<li>使用时间：1年</li>
+									<li>掌握程度：熟练</li>
+								</ul>
+								<div class="divider"></div>
+								<h2>
+									JavaScript
+									<img src="./images/3star.png" class="star" alt width="94" height="20">			
+								</h2>
+								<ul>
+									<li>使用时间：3个月</li>
+									<li>掌握程度：一般</li>
+								</ul>
+							</div>
+							<div class="one-half last">
+								<h2>
+									Java
+									<img src="./images/4star.png" class="star" alt width="94" height="20">			
+								</h2>
+								<ul>
+									<li>使用时间：2年</li>
+									<li>掌握程度：熟练</li>
+								</ul>
+								<div class="divider"></div>	
+								<h2>
+									Jquery
+									<img src="./images/2star.png" class="star" alt width="94" height="20">			
+								</h2>
+								<ul>
+									<li>使用时间：3个月</li>
+									<li>掌握程度：一般</li>
+								</ul>
+							</div>
+					    </div>
+				    </div>				
+			    </div>
+			<!--contact page-->
+			<div class="tab" style="display:none;">
+				<h1>联系方式</h1>
+				<ul class="contact-list">
+					<li class="phone">***-****-****</li>
+					<li class="address">海淀区西土城路10号 北京邮电大学</li>
+					<li class="email">**********@163.com</li>
+					<li class="pdf">
+						<a  href="./download/liyuan.pdf" target="_blank">打开pdf版简历</a>
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>	
+    
+	<!--页面底部-->
+	<div id="footer">
+		<div>
+			<p>author:ly</p>
+			<p>last modified:2015/06/07</p>
+		</div>
+	</div>	
+    </div>
+	<script type="text/javascript" src="./scripts/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./scripts/global.js"></script>
+</body>
+</html>
+

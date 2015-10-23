@@ -1,0 +1,335 @@
+/*1、使用css3实现了过渡、文本阴影等效果
+  2、浏览器大小变化，而页面布局不变（页脚始终在浏览器最下方；浏览器缩小时，右侧背景不会出现空白）*/
+
+/*把所有元素的内外边距设为0，就把不同浏览器为元素设置的不同内外边距全都删除了*/
+*{
+	padding: 0;
+	margin: 0;
+}
+/*html、body宽度、高度设置*/
+html,body{
+	height: 100%;
+	width: 100%;
+}
+/*整体页面设置*/
+#page{	
+	position: relative;
+	min-height: 100%;/*设置最小高度为100%，保证文本较少时页脚始终在浏览器底部*/
+	min-width: 1000px;	/*设置最小宽度，当浏览器缩小时，不会出现右侧背景空白问题*/
+	background: #FCFCFC
+	url(../images/bg.png)
+	repeat;	
+	font:normal 14px 'Microsoft YaHei',Helvetica,arial,sans-serif;	
+	color: #3C474A;	
+}
+/*header配置*/
+#header{
+	/*background:#CCCCFF;*/
+	/*background:#CDCCFF;*/
+	/*background:#EADCFF;*/
+	background:rgba(0,0,0,0)
+	   url(../images/head.jpg)
+	   repeat 0px -15px;
+	height:83px;	
+	width: 100%;
+	font:italic bold 45px 'STLiti',Helvetica,arial,sans-serif;
+	color: #FFF;	
+	text-shadow:2px 2px 2px #C59BC9;
+}
+/*header中p的位置、不换行*/
+#header p{
+	padding-top: 30px;
+	padding-left: 45px;
+	white-space: nowrap;
+}
+/*container的大小、位置*/
+#container{
+	width: 960px;
+	margin: auto;	
+	height: 600px;
+	padding-top: 25px;
+	padding-bottom: 35px;/*与footer的height大小一致，当浏览器缩小时，footer不会覆盖掉文字*/
+}
+/*footer设置*/
+#footer{
+	height: 35px;
+	width: 100%;	
+	background:rgba(0,0,0,0)
+	   url(../images/head.jpg)
+	   repeat 0px -15px;	
+	position: absolute;
+	bottom: 0;	
+	font:bold 18px 'SimHei',Helvetica,arial,sans-serif;
+	color: #FFF;
+	text-align: center;
+	line-height:0.9;
+	text-shadow:1px 1px 1px #C59BC9;
+}
+ul{
+	list-style: none;
+}
+/*左侧导航栏设置*/
+ul#tab-menu{
+	float: left;
+	width: 210px;		
+	margin-right:30px;
+	padding: 38px 40px 0px 0px;	
+	font: normal 20px 'Microsoft YaHei',Helvetica,arial,sans-serif;
+	text-align: center;
+}
+/*左侧导航栏li边框、鼠标形状设置*/
+ul#tab-menu li{
+	border-top: 1px dotted #BBB;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	cursor: pointer;	
+}
+/*左侧导航栏li边框、鼠标浮动在上面时的颜色*/
+ul#tab-menu li:hover
+{ 
+	color: #54BBDD; 	
+}
+/*左侧导航栏li边框、鼠标选中时的颜色、背景颜色渐变、边框为圆角矩形*/
+ul#tab-menu li.selected
+{
+	color: #6B777C;
+	background: #E8E4EF;
+	/*background: #EADCFF;*/
+	/*background: #FFF6CC;*/
+	transition:background-color 2s;
+	-moz-transition:background-color 2s;
+	-webkit-transition:background-color 2s;
+	-o-transition:background-color 2s;
+	border-radius: 15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+}
+/*右侧内容设置*/
+div#tab-content{		
+	width: 660px;
+	float: left;
+	line-height: 2;
+	/*padding-bottom: 80px;*/
+}
+/*首页自我介绍左边部分布局*/
+#left{	
+	margin-right: 20px;
+	float: left;	
+	width: 400px;
+}
+/*首页自我介绍右边部分布局*/
+#right{
+	width: 240px;	
+	margin-right: 0 !important;	
+	float: left;	
+}
+/*首页自我介绍右边部分图片位置*/
+#right img{
+    padding-left: 10px;   
+    margin-top: 10px;    
+}
+/*首页自我介绍右边部分图片边框*/
+.polaroid
+{
+	border: 1px solid #BFBFBF;
+	background-color: white;	
+	box-shadow: 2px 2px 3px #aaaaaa;
+	border-radius: 7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px; 
+	margin-bottom: -10px;
+}
+/*首页自我介绍右边部分图片左旋转*/
+.rotate-left
+{
+	-ms-transform:rotate(7deg);
+	-moz-transform:rotate(7deg);
+	-webkit-transform:rotate(7deg);
+	-o-transform:rotate(7deg);
+	transform:rotate(7deg);
+}
+/*首页自我介绍右边部分图片左旋转2*/
+.rotate-left2
+{
+	-ms-transform:rotate(5deg);
+	-moz-transform:rotate(5deg);
+	-webkit-transform:rotate(5deg);
+	-o-transform:rotate(5deg);
+	transform:rotate(5deg);
+
+}
+/*首页自我介绍右边部分图片右旋转*/
+.rotate-right
+{
+	-ms-transform:rotate(-8deg);
+	-moz-transform:rotate(-8deg);
+	-webkit-transform:rotate(-8deg);
+	-o-transform:rotate(-8deg);
+	transform:rotate(-8deg);
+	margin-bottom: 10px;
+}
+/*首页自我介绍字体格式，首行缩进*/
+.introduction
+{
+	font-size: 16px;
+	padding-bottom: 15px;
+	text-indent: 2em;
+	
+}
+/*右侧标题设置*/
+h1
+{	
+	display: block;	
+	padding: 8px 0px 28px 0px;
+	font: normal 25px 'Microsoft YaHei',Helvetica,arial,sans-serif;
+	background: rgba(0,0,0,0)
+	   url(../images/line.png)
+	   repeat-x 0px 30px;
+	text-shadow:2px 1px 0px #D6C5D8;
+	letter-spacing: 1px;
+}
+/*右侧导航栏设置*/
+ul.inner-tab
+{
+	width: 660px;	
+	height: 45px;	
+	padding-bottom: 10px;
+	margin-left: -15px;
+}
+/*右侧导航栏设置li边框*/
+ul.inner-tab li
+{
+	float: left;
+	border-right:1px dotted #BEBEBE; 
+	padding: 0px 18px 0px 18px;	
+}
+/*右侧导航栏链接设置*/
+ul.inner-tab li a
+{
+	float: left;
+	font: normal 18px 'Microsoft YaHei',Helvetica,arial,sans-serif;
+	color: #3C474A;		
+	text-decoration: none;
+}
+ul.inner-tab li a:hover ,ul.inner-tab li a.selected
+{ 
+	color: #54bbdd;
+}
+/*个人信息页字体设置*/
+ul.personal li
+{
+	font: normal 15px 'Microsoft YaHei',Helvetica,arial,sans-serif;	
+	padding:0px 13px 13px 5px; 
+}
+/*铅笔图标*/
+.pen
+{
+	background: url(../images/pen.png)
+	   no-repeat 2px 0px;
+	padding: 0px 5px 0px 27px;
+}
+/*右侧大标题*/
+h2
+{
+	font: normal 17px 'Microsoft YaHei',Helvetica,arial,sans-serif; 	
+}
+.job h2,.pen h2
+{
+	padding-bottom: 5px;
+}
+/*日期标题*/
+h4
+{
+	font-size: 12px;
+	font-weight: normal;	
+	padding-bottom: 10px;	
+}
+/*分割线*/
+.divider
+{
+	background: rgba(0,0,0,0)
+	   url(../images/diagonal_line.png)
+	   repeat-x bottom left;
+	height: 4px;
+	display: block;
+	margin: 25px 0px 25px 0px;	
+}
+/*项目经验图标*/
+.job
+{
+	background: url(../images/full-time.png)
+	   no-repeat 2px -1px;
+	padding: 0px 5px 0px 27px;
+}
+/*页面内容加粗部分*/
+p.subtitle span  
+{
+	font-weight: bold;
+	font-style: normal;
+}
+/*奖杯图标*/
+.award
+{
+	background: url(../images/award.png)
+	   no-repeat 2px -1px;
+	padding: 0px 5px 0px 27px;
+}
+.award ul,.one-half ul,.last ul
+{
+	padding-top: 10px;
+}
+/*技能左边部分*/
+.one-half
+{	
+	margin-right: 59px;
+	float: left;	
+	width: 300px;
+}
+/*技能右边部分*/
+.last
+{
+	width: 300px;	
+	margin-right: 0 !important;	
+}
+/*联系方式页面*/
+ul.contact-list
+{
+	padding-left: 10px;
+}
+ul.contact-list li
+{
+	font-size: 17px;
+	line-height: 20px;	
+	padding: 5px 0 15px 40px;	
+}
+ul.contact-list li a
+{
+	color: #3C474A; 
+}
+ul.contact-list li a:hover ,ul.contact-list li a.selected
+{ 
+	color: #54bbdd;
+}
+/*地址图标*/
+.address
+{
+	background-image: url(../images/home.png);
+	background-repeat: no-repeat;
+}
+/*电话图标*/
+.phone
+{
+	background-image: url(../images/telephone.png);
+	background-repeat: no-repeat;
+}
+/*邮件图标*/
+.email
+{
+	background-image: url(../images/email.png);
+	background-repeat: no-repeat;
+}
+.pdf
+{
+	background-image: url(../images/pdf.png);
+	background-repeat: no-repeat;
+}
